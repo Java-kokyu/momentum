@@ -10,4 +10,6 @@ const backgroundImg = document.createElement("img");
 
 backgroundImg.src = chosenImage;
 
-document.body.appendChild(backgroundImg);
+const backImg = document.body.appendChild(backgroundImg);
+
+backImg.classList.add("background");

@@ -5,23 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Momentum App</title>
 </head>
 <body>
-    <form id="login-form" class="hidden">
-        <input 
-        required 
-        maxlength="15" 
-        type = "text" 
-        placeholder="What is your name?"/>
-    <button>Log In</button>
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <h2 id="clock">00:00:00</h2>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To-DO and press Enter"/>
-    </form>
-    <ul id="todo-list"></ul>
+
+    <div id="todo-fullset">
+        <h2 id="clock">00:00:00</h2>
+        <form id="login-form" class="hidden">
+            <input 
+            required 
+            maxlength="15" 
+            type = "text" 
+            placeholder="What is your name?"/>
+        <button>Log In</button>
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+        <form id="todo-form">
+            <input type="text" placeholder="Write a To-DO and press Enter"/>
+        </form>
+        <ul id="todo-list"></ul>   
+    </div>
+    
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+
 
     <div id="quotes">
         <span></span>
@@ -34,5 +46,6 @@
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 </html>

@@ -26,7 +26,10 @@ function printToDo(newToDo){
     const button = document.createElement("button");
     button.innerText = "X";
     li.appendChild(span);
-    li.appendChild(button); 
+    li.appendChild(button);
+    button.classList.add("hidden");
+    li.addEventListener("mouseover", () => button.classList.remove("hidden"));
+    li.addEventListener("mouseout", () => button.classList.add("hidden"));
     button.addEventListener("click", deleteToDo); 
     toDoList.appendChild(li);
 }
