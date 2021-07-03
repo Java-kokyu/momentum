@@ -32,6 +32,14 @@ body {
   animation: fadeIn 0.5s linear;
   }
 
+.todo-fullset {
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  top: 30%;
+  text-align: center;
+
+}
 #clock {
   margin-top: 50px;
   font-size: 80px;
@@ -42,8 +50,8 @@ body {
   }
 
 #greeting {
-  margin: 10px;
-  margin-top: 0;
+  margin-bottom: 10px;
+  animation: fadeIn 0.5s linear;
 }
 
 #quotes {
@@ -71,7 +79,8 @@ body {
   right: 0;
 }
 li:hover{
-  color: gray;  
+  color: gray;
+  animation: fadeIn 0.3s linear;  
 }
 
 li button{
@@ -82,10 +91,15 @@ li button{
   color: #FFFFFF;
 }
 
-#todo-fullset {
-  width: 500px;
-  height: 250px;
-  position: absolute;
-  top: 30%
-
+ul{
+  width: 300px;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
+li{
+  list-style-type: none;
+  text-align: center;
+  margin: 3px;
+}
+

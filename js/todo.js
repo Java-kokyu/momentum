@@ -2,7 +2,9 @@ const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input")
 const toDoList = document.querySelector("#todo-list");
 
+
 const TODOS_KEY = "toDos";
+const HIDDEN_CLASS = "hidden";
 
 let toDoAry = [];
 
@@ -52,10 +54,10 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDoAry = localStorage.getItem(TODOS_KEY);
 
+
 if(savedToDoAry !== null){
     parsedToDoAry = JSON.parse(savedToDoAry);
     toDoAry = parsedToDoAry;
 
     parsedToDoAry.forEach(printToDo);
-
 }
