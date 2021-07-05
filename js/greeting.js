@@ -9,7 +9,7 @@ const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
 function showGreeting(username){
-    greeting.innerText = `Hello ${username}`;
+    greeting.innerText = `Hello, ${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);  
 }
 

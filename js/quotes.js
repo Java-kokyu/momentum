@@ -48,5 +48,8 @@ const author = document.querySelector("#quotes span:last-child");
 const randomNumber = Math.floor(Math.random() * quotes.length);
 const todayQuote = quotes[randomNumber];
 
-quote.textContent = todayQuote.quote;
+quote.textContent = `"${todayQuote.quote}"`;
 author.textContent = todayQuote.author;
+author.classList.add("hidden");
+quote.addEventListener("mouseover", () => author.classList.remove("hidden"));
+quote.addEventListener("mouseout", () => author.classList.add("hidden"));
