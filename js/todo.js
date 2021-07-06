@@ -5,6 +5,7 @@ const toDoList = document.querySelector("#todo-list");
 
 const TODOS_KEY = "toDos";
 const HIDDEN_CLASS = "hidden";
+const btnClickSound = new Audio("sound/ding_sound.mp3");
 
 let toDoAry = [];
 
@@ -13,11 +14,17 @@ function saveToDo(newToDo){
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDoAry));
 }
 
+function soundEffect() {
+    btnClickSound.currentTime = 0;
+    btnClickSound.play();
+}
+
 function deleteToDo(event){
     const li = event.target.parentElement;
     li.remove();
     toDoAry = toDoAry.filter((todo) => todo.id !== parseInt(li.id))
     saveToDo(toDoAry);
+    soundEffect();
 }
 
 function printToDo(newToDo){
